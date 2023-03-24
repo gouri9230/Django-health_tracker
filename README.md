@@ -17,17 +17,16 @@ This program requires python3.+ (and pip) installed along with Django 4.1.7. Ple
 SQLAlchemy was used in this project as ORM with SQLite and MySQL as the database client.
 
 ## Technologies Used
-Python 3.10.6
-Django 4.1.7
-Werkzeug 2.2.3
-HTML
-SQLAlchemy
+* Python 3.10.6
+* Django 4.1.7
+* Werkzeug 2.2.3
+* HTML, bootstrap4
+* SQLAlchemy
 
-# This app has not undergone any kind of testing yet!
+## This app has not undergone any kind of testing yet!
 
-## Author
-Shrigouri Navaranta
+👤 **Shrigouri Navaranta**
+* Email: snavaratna23@gmail.com
+* Github: [@gouri2390](https://github.com/gouri9230)
+* LinkedIn: (https://www.linkedin.com/in/shrigouri-navaratna/)
 
-Email: snavaratna23@gmail.com
-Github: @gouri2390
-LinkedIn: (https://www.linkedin.com/in/shrigouri-navaratna/)
