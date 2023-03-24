@@ -1,0 +1,28 @@
+{% extends "calorie_counter/base.html" %}
+{% block title%} My Home {% endblock %}
+{% block content %}
+<div class="content-section"><br>
+    <h4>You have consumed {{ calories|floatformat:0 }} calories today</h4><h6>(serving size per 100gm of each meal.)</h6>
+</div>
+<div class="row justify-content-center mt-5 mb-5">
+    <div class="col-md-10 caloriescont shadow rounded">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mt-3 mb-4">Nutritional Values: </h2>
+                <ul>
+                    <li class="servingsize">Serving Size per 100gms <span class="float-end"></span></li>
+                    <li>Total Fat: {{ api_results.0.0.fat_total_g|add:api_results.1.0.fat_total_g|add:api_results.2.0.fat_total_g|add:api_results.3.0.fat_total_g }}</li>
+                    <li>Saturated Fat: {{ api_results.0.0.fat_saturated_g|add:api_results.1.0.fat_saturated_g|add:api_results.2.0.fat_saturated_g|add:api_results.3.0.fat_saturated_g }}</li>
+                    <li>Protein: {{ api_results.0.0.protein_g|add:api_results.1.0.protein_g|add:api_results.2.0.protein_g|add:api_results.3.0.protein_g }}</li>
+                    <li>Sodium: {{ api_results.0.0.sodium_mg|add:api_results.1.0.sodium_mg|add:api_results.2.0.sodium_mg|add:api_results.3.0.sodium_mg }}</li>
+                    <li>Potassium: {{ api_results.0.0.potassium_mg|add:api_results.1.0.potassium_mg|add:api_results.2.0.potassium_mg|add:api_results.3.0.potassium_mg }}</li>
+                    <li>Cholesterol: {{ api_results.0.0.cholesterol_mg|add:api_results.1.0.cholesterol_mg|add:api_results.2.0.cholesterol_mg|add:api_results.3.0.cholesterol_mg }}</li>
+                    <li>Carbohydrate: {{ api_results.0.0.carbohydrates_total_g|add:api_results.1.0.carbohydrates_total_g|add:api_results.2.0.carbohydrates_total_g|add:api_results.3.0.carbohydrates_total_g }}</li>
+                    <li>Fiber: {{ api_results.0.0.fiber_g|add:api_results.1.0.fiber_g|add:api_results.2.0.fiber_g|add:api_results.3.0.fiber_g }}</li>
+                    <li>Sugar: {{ api_results.0.0.sugar_g|add:api_results.1.0.sugar_g|add:api_results.2.0.sugar_g|add:api_results.3.0.sugar_g }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>     
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "calorie_counter/base.html" %}
+{% block title%} BMI calculation {% endblock %}
+{% block content %}
+<div class="content-section">
+    <br>
+    <table border="1" cellpadding="5" cellspacing="5" style="background-color:#abb6ad">
+        <tr>
+            <th>BMI</th>
+            <th>Weight Status</th>
+        </tr>
+        
+        <tr>
+            <td>Below 18.5</td>
+            <td>Underweight</td>
+        </tr>
+        <tr>
+            <td>18.5 - 24.9</td>
+            <td>Healthy Weight</td>
+        </tr>
+        <tr>
+            <td>25.0 - 29.9</td>
+            <td>Overweight</td>
+        </tr>
+        <tr>
+            <td>30.0 and Above</td>
+            <td>Obesity</td>
+        </tr>
+    </table><br>
+        <h4><b>BMI:</b></h4>
+        <p> Your Body Mass Index (BMI) is: <strong>{{ bmi|floatformat:2 }}</strong></p>
+        {% if bmi < 18.5 %}
+            <p>You are <b>Underweight</b>! Eat healthy and stay fit!!</p>
+        {% elif bmi >= 18.5 and bmi <= 24.9 %}
+            <p>You have a <b>Healthy weight</b>. Keep up the good work!</p>
+        {% elif bmi >= 25.0 and bmi <= 29.9 %}
+            <p>You are <b>Overweight</b>! Try to exercise and be active</p>
+        {% else %}
+            <p>You are <b>Obese</b>. Eat healthy and keep working out!</p>
+        {% endif %}
+</div><br>
+<h4><b>Calorie requirement</b></h4>
+<p>You need <strong>{{ cal|floatformat:2 }}</strong> calories per day to maintain your weight. </p>
+<p>If you want to lose weight, try to stay below your calorie needs or increase your activity level. </p>
+<p>On active days, you'll need more calories. </p>
+        
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "calorie_counter/base.html" %}
+{% block title%} My Home {% endblock %}
+{% block content %}
+<div class="content-section"><br>
+        {% for api_i in api %}
+            <p><strong>A {{ api_i.serving_size_g }}gm of <em> {{ api_i.name }} </em> has a total of:</strong></p>
+                <ul>
+                        <li>Calories: {{api_i.calories}}</li>
+                        <li>Total Fat: {{api_i.fat_total_g}}</li>
+                        <li>Saturated Fat: {{api_i.fat_saturated_g}}</li>
+                        <li>Protein: {{api_i.protein_g}}</li>
+                        <li>Sodium: {{api_i.sodium_mg}}</li>
+                        <li>Potassium: {{api_i.potassium_mg}}</li>
+                        <li>Cholesterol: {{api_i.cholesterol_mg}}</li>
+                        <li>Carbohydrate: {{api_i.carbohydrates_total_g}}</li>
+                        <li>Fiber: {{api_i.fiber_g}}</li>
+                        <li>Sugar: {{api_i.sugar_g}}</li>
+                </ul>
+                
+        {% endfor %}
+</div>
+        
+{% endblock %}

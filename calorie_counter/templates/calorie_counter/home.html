@@ -1,0 +1,21 @@
+{% extends "calorie_counter/base.html" %}
+{% block title%} My Home {% endblock %}
+{% block content %}
+<br>
+    <h1 align="center">Welcome {{ user.username }}! </h1><hr><br>
+    <ol>
+        <li>Know the calories of your favourite foods. Be informed and eat right!!</li>
+        <li>Calculate your BMI now and know what is your body's calorie requirement!! </li>
+        <li>How many calories did you eat today? Check now in this website!</li>
+    </ol>
+    
+    <br>
+    <font color="red"><strong>You look happy when you eat healthy</strong>!!</font><br>
+    {% if user.is_authenticated %}
+        <p> Explore Now!</p>
+    {% else %}
+        <br>
+        <p>Register Now to access all the features for free!</p>
+        <a href="registration/sign_up.html">Register here</a>
+    {% endif %}
+{% endblock %}
