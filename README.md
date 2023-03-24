@@ -16,7 +16,7 @@ The features included:
 This program requires python3.+ (and pip) installed along with Django 4.1.7. Please check requirements.txt for other package dependencies. 
 SQLAlchemy was used in this project as ORM with SQLite and MySQL as the database client.
 
-Technologies Used
+## Technologies Used
 Python 3.10.6
 Django 4.1.7
 Werkzeug 2.2.3
@@ -25,7 +25,7 @@ SQLAlchemy
 
 # This app has not undergone any kind of testing yet!
 
-# Author
+## Author
 Shrigouri Navaranta
 
 Email: snavaratna23@gmail.com
